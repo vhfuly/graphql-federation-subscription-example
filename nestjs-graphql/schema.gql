@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Campaign {
+  campaignID: String!
+  campaign: String!
+  active: Boolean!
+}
+
+type Query {
+  campaign(campaignID: String!): Campaign
+  campaigns: [Campaign!]!
+}
+
+type Mutation {
+  createCampaign(createCampaignData: CreateCampaignInput!): Campaign!
+  deleteCampaign(deleteCampaignData: DeleteCampaignInput!): Campaign!
+}
+
+input CreateCampaignInput {
+  campaign: String!
+  active: Boolean!
+}
+
+input DeleteCampaignInput {
+  campaignID: String!
+}
